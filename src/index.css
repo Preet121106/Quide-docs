@@ -1,0 +1,80 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 6% 4%; /* #09090B */
+    --foreground: 210 40% 98%;
+
+    --card: 210 6% 6%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 210 6% 6%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 210 100% 75%;
+    --primary-foreground: 210 6% 4%;
+
+    --secondary: 210 6% 10%;
+    --secondary-foreground: 210 40% 95%;
+
+    --muted: 210 6% 10%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 210 6% 12%;
+    --accent-foreground: 210 40% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 6% 15%;
+    --input: 210 6% 15%;
+    --ring: 210 100% 75%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 6% 3%;
+    --sidebar-foreground: 210 40% 85%;
+    --sidebar-primary: 210 100% 75%;
+    --sidebar-primary-foreground: 210 6% 4%;
+    --sidebar-accent: 210 6% 8%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 210 6% 12%;
+    --sidebar-ring: 210 100% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+
+  /* Scrollbar styling for dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--accent));
+  }
+}
